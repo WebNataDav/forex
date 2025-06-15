@@ -1,0 +1,252 @@
+@use "../base/variables";
+
+$breakpoint-desktop: 1200px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+//media queries header
+@media (max-width: $breakpoint-desktop) {
+  .header {
+    &__info {
+      gap: 10px;
+    }
+
+    &__info-text {
+      font-size: 12px;
+    }
+
+    &__info-numbers {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 5px;
+    gap: 5px;
+
+    &__user {
+      &::after { display: none; }
+    }
+
+    &__info {
+      order: 1;
+      width: 100%;
+      padding-top: 5px;
+      border-top: 1px solid variables.$color-divider;
+      font-size: 12px;
+    }
+    &__search-wrapper {
+      width: auto;
+      padding-right: 10px;
+  
+      .header__search {
+        display: none; 
+      }
+  
+      .header__search-icon {
+        position: static; 
+        pointer-events: auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//media queries sidebar 
+@media (max-width: $breakpoint-tablet) {
+  .sidebar {
+    padding: 5px;
+    width: 50px;
+    &__logo-img {
+      width: 25px;
+      height: 25px;
+    }
+    &__nav-menu-link {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .sidebar {
+    &__nav-menu-link {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .sidebar {
+    width: 40px;
+  }
+}
+
+//tabs media queries
+
+@media (max-width: $breakpoint-desktop) {
+  .tabs {
+    gap: 5px;
+    height: auto;
+    margin: 0 5px 0 0;
+    padding: 10px;
+    &__item {
+      padding: 7px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .tabs {
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin: 0 5px 0 0;
+  }
+}
+
+//media queries chart top
+@media (max-width: $breakpoint-desktop) {
+  .numbers, .text-14, .alert, .success, .chart__info {
+    font-size: 12px;
+  }
+  .chart__top {
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    padding: 8px 12px;
+    &-info-item {
+      span {
+        font-size: 16px;
+      }
+      strong {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .chart {
+    margin-right: 0;
+  }
+  .chart__top {
+    grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+    padding: 8px;
+    &-info-item {
+      flex-wrap: wrap;
+      gap: 3px;
+      &--row {
+        flex-wrap: wrap;
+      }
+
+      &--alt {
+        align-items: center;
+      }
+
+      &--span {
+        display: block;
+        width: 100%;
+      }
+
+      img {
+        height: 16px;
+        width: 16px;
+      }
+
+      span {   
+        font-size: 14px;
+      }
+      strong {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .chart__top {
+    padding: 8px 5px;
+  }
+}
+
+//media queries table 
+@media (max-width: $breakpoint-desktop) {
+  .chart__table {
+    &-months {
+      padding: 0 20px 10px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet){
+  .chart__table{
+    margin-bottom: 90px;
+    &-canvas {
+      height: 250px;
+    }
+    &-month {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .chart__table {
+    &-canvas {
+      height: 200px;
+    }
+  }
+}
+
+//media queries content
+@media (max-width: $breakpoint-desktop) {
+  .content {
+    flex-wrap: wrap;
+    &__wrapper {
+      width: 100%;
+    }
+  }
+}
+
+//media queries tabs
+@media (max-width: $breakpoint-desktop){
+  .trade {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+//media queries footer 
+@media (max-width: $breakpoint-tablet) {
+  .footer {
+    padding: 5px;
+    height: auto;
+    &__wrapper {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+    }
+    &__tab {
+      font-size: 12px;
+      height: 25px;
+      width: 25px;
+    }
+    &__tab:before {
+      display: none;
+    }
+  }
+}
+
+//media queries global
+@media (max-width: $breakpoint-tablet) {
+  .numbers, .text-14, .alert, .success {
+    font-size: 12px;
+  }
+}
+
+
+
