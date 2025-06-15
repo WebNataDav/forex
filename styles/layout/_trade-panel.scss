@@ -1,0 +1,309 @@
+@use "../base/variables";
+
+.trade {
+  width: 350px;
+  color: variables.$color-text;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px 4px 0 0;
+    height: 56px;
+    background-color: variables.$color-panel;
+
+    &-title {
+      font-size: 16px;
+      color: variables.$color-text;
+      font-weight: 500;
+    }
+  }
+
+  &__menu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__menu-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tabs {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid variables.$color-text-secondary;
+  }
+
+  &__tab { 
+    width: 49%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @include variables.text-style;
+    &--active {
+      color: variables.$color-trade-active;
+      background: linear-gradient(180deg, rgba(9, 135, 108, 0.1) 32.15%, rgba(15, 237, 190, 0.25) 100%);
+      border-bottom: 2px solid variables.$color-trade-active;
+    }
+  }
+
+  &__form {
+    padding: 10px 5px 5px;
+    max-width: 302px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__field { 
+    margin-bottom: 15px; 
+  }
+
+  &__field--last{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-image: repeating-linear-gradient(
+        to right,
+        variables.$color-bg-elements,
+        variables.$color-bg-elements 7px,
+        transparent 7px,
+        transparent 10px
+      );
+    }
+  }
+
+  &__field-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__field-switcher {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    margin-right: 5px;
+    background-color: variables.$color-hover;
+    border-radius: 10px;
+    border: none;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: 4px; 
+      width: 12px;
+      height: 12px;
+      background-color: variables.$color-bg;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__select {
+    width: 302px;
+    height: 40px;
+    padding: 6px;
+    margin-top: 3px;
+    padding: 6px 36px 6px 12px;
+    background: variables.$color-bg-elements url('../img/icons/arrow-down.svg') no-repeat right 12px center;
+    background-size: 16px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    color: variables.$color-text;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+&__input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  width: 100%;
+  height: 40px;
+  padding: 6px 36px 6px 12px; 
+  margin-top: 3px;
+  background: variables.$color-bg-elements;
+  font-weight: 400;
+  font-size: 14px;
+  color: variables.$color-text;
+  border: none;
+  border-radius: 6px;
+  &-alt {
+    padding-left: 24px;
+  }
+}
+
+&__input-wrapper {
+  position: relative;
+  width: 302px;
+}
+
+
+&__currency-symbol {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: variables.$color-text;
+  pointer-events: none;
+}
+
+&__input-arrows {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+&__label {
+  span {
+    padding: 2px;
+    color: variables.$color-hover;
+    border: 1px solid variables.$color-hover;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+}
+
+&__arrow {
+  width: 16px;
+  height: 16px;
+  background: url('../img/icons/arrow-down.svg') no-repeat;
+  background-size: contain;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &--up {
+    transform: rotate(180deg);
+    margin-bottom: -5px;
+  }
+
+  &--down {
+    margin-top: -5px;
+  }
+}
+
+&__quantity-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  button {
+    height: 34px;
+    width: 61.5px;
+    background-color: variables.$color-bg-elements;
+    border: none;
+    border-radius: 12px;
+    color: variables.$color-text;
+  }
+}
+
+&__text {
+  span {
+    color: variables.$color-danger;
+  }
+}
+
+&__description {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+&__description-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+  &__submit {
+    width: 100%;
+    padding: 10px;
+    background-color: variables.$color-accent;
+    border: none;
+    border-radius: 5px;
+    color: variables.$color-bg;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__form-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__form-bottom--text {
+    color: variables.$color-text;
+    font-size: 12px;
+  }
+
+  &__menu-footer--info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    gap: 10px;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 73px;
+      top: 15px;
+      right: 0;
+      background-color: variables.$color-bg-elements;
+      border-radius: 3px;
+    }
+  }
+  
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center;
+  }
+  
+  &__cell--time {
+    text-align: left;
+  }
+  
+  &__cell--price {
+    text-align: center;
+  }
+  
+  &__cell--amount {
+    text-align: right;
+  }
+  
+}

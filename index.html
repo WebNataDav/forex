@@ -100,6 +100,120 @@
           </nav>
         </div>
         <aside class="trade">
+          <div class="trade__menu">
+            <h3 class="trade__menu-title">Trade</h3>
+            <button class="trade__menu-button" aria-label="Open trade menu">
+              <img src="img/trade/trade-menu.svg" alt="menu" aria-hidden="true" />
+            </button>
+          </div>
+          <div class="trade__tabs">
+            <button class="trade__tab trade__tab--active">Buy</button>
+            <button class="trade__tab">Sell</button>
+          </div>
+          <div class="trade__wrapper">
+            <form class="trade__form">
+              <div class="trade__field">
+                <label class="trade__label text-14">Order Type</label>
+                <select class="trade__select">
+                  <option>Market Price</option>
+                </select>
+              </div>
+              <div class="trade__field">
+                <label class="trade__label text-14">Quantity <span>Shares</span></label>
+                <div class="trade__input-wrapper">
+                  <input type="number" class="trade__input" value="100" />
+                  <div class="trade__input-arrows">
+                    <button class="trade__arrow trade__arrow--up" aria-label="Increase quantity"></button>
+                    <button class="trade__arrow trade__arrow--down" aria-label="Decrease quantity"></button>
+                  </div>
+                </div>
+                <div class="trade__quantity-options">
+                  <button>10</button><button>50</button><button>100</button><button>500</button>
+                  <img src="./img/icons/pensil-settings.svg" alt="settings"/>
+                </div>
+              </div>  
+              <div class="trade__field">
+                <label class="trade__label text-14">Time-in-Force</label>
+                <select class="trade__select">
+                  <option>Day</option>
+                </select>
+              </div>          
+              <div class="trade__field trade__field--last">
+                <div class="trade__field-wrapper">
+                  <button class="trade__field-switcher"></button>
+                  <label class="trade__label number-style">Stop Price</label>
+                </div>
+                <div class="trade__input-wrapper">
+                  <span class="trade__currency-symbol">$</span>
+                  <input
+                    type="number"
+                    class="trade__input trade__input-alt"
+                    step="0.01"
+                    value="400.00"
+                  />
+                  <div class="trade__input-arrows">
+                    <button class="trade__arrow trade__arrow--up" aria-label="Increase quantity"></button>
+                    <button class="trade__arrow trade__arrow--down" aria-label="Decrease quantity"></button>
+                  </div>
+                </div>
+                <p class="trade__text text-14">Est. Loss: <span>12,057.36</span></p>
+              </div>
+              <div class="trade__description">
+                <div class="trade__description-item">
+                  <p class="trade__text text-14">Buying Power</p>
+                  <strong class="trade__res numbers">$122,912.50</strong>
+                </div>
+                <div class="trade__description-item">
+                  <p class="trade__text text-14">Transaction Fees</p>
+                  <strong class="trade__res numbers">$4.00</strong>
+                </div>
+                <div class="trade__description-item">
+                  <p class="trade__text text-14">Estimated Total</p>
+                  <strong class="trade__res numbers">$40,000</strong>
+                </div>
+              </div>
+              <button class="trade__submit">Buy MSFT</button>
+              <div class="trade__form-bottom">
+                <p class="trade__form-bottom--text">Disclaimer</p>
+                <img src="./img/icons/arrow-right.svg"/>
+              </div>
+            </form>
+          </div>
+          <div class="trade__menu-footer">
+            <div class="trade__menu">
+              <h3 class="trade__menu-title">Time & Sales</h3>
+              <button class="trade__menu-button" aria-label="Open trade menu">
+                <img src="img/trade/trade-menu.svg" alt="menu" aria-hidden="true" />
+              </button>
+            </div>
+            <div class="trade__menu-footer--info">
+              <div class="trade__row">
+                <span class="trade__cell trade__cell--time numbers">16:59:32</span>
+                <span class="trade__cell trade__cell--price numbers">420.56</span>
+                <span class="trade__cell trade__cell--amount numbers">25</span>
+              </div>
+              <div class="trade__row">
+                <span class="trade__cell trade__cell--time numbers">16:59:32</span>
+                <span class="trade__cell trade__cell--price numbers">420.56</span>
+                <span class="trade__cell trade__cell--amount numbers">25</span>
+              </div>
+              <div class="trade__row">
+                <span class="trade__cell trade__cell--time numbers">16:59:32</span>
+                <span class="trade__cell trade__cell--price numbers">420.56</span>
+                <span class="trade__cell trade__cell--amount numbers">25</span>
+              </div>
+              <div class="trade__row">
+                <span class="trade__cell trade__cell--time numbers">16:59:32</span>
+                <span class="trade__cell trade__cell--price numbers">420.56</span>
+                <span class="trade__cell trade__cell--amount numbers">25</span>
+              </div>
+              <div class="trade__row">
+                <span class="trade__cell trade__cell--time numbers">16:59:32</span>
+                <span class="trade__cell trade__cell--price numbers">420.56</span>
+                <span class="trade__cell trade__cell--amount numbers">25</span>
+              </div>
+            </div>
+          </div>
         </aside>
       </section>
     </div>
