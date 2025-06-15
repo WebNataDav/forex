@@ -1,0 +1,36 @@
+@use "../base/variables";
+
+.tabs {
+  display: flex;
+  height: 56px;
+  padding: 0 22px;
+  gap: 22px;
+  margin: 0 10px 0 0;
+  border-radius: 4px 4px 0 0;
+  background-color: variables.$color-bg-elements;
+
+  &__item {
+    border: none;
+    background-color: transparent;
+    padding: 10px 16px;
+    @include variables.text-style;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--active {
+      color: variables.$color-hover;
+      border: none;
+      border-bottom: 2px solid transparent;
+    
+      border-image: radial-gradient(
+        42.4% 100% at 50% 101.79%,
+        #2DCAFF 34.47%,
+        rgba(5, 5, 5, 0) 100%
+      );
+      border-image-slice: 1;
+      border-image-width: 2px;
+      border-image-outset: 0;
+      border-image-repeat: stretch;
+    }
+  }
+}
