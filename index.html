@@ -98,6 +98,128 @@
             <button class="tabs__item">Notes</button>
             <button class="tabs__item">Profile</button>
           </nav>
+          <section class="chart">
+            <div class="chart__top">
+              <div class="chart__top-info chart__top-info-item">
+                <span class="chart__top-info-item--span">MSFT</span><p class="numbers">Microsoft Corp NASDAQ</p>
+                <img alt="eye" src="./img/icons/eye.svg"/>
+                <img alt="alert" src="./img/icons/alert.svg"/>
+              </div>
+              <p class="chart__top-info text-14">Open</p>
+              <p class="chart__top-info alert">401.23</p>
+              <p class="chart__top-info text-14">Avg Vol (3M)</p>
+              <p class="chart__top-info numbers chart__top-last">21.73M</p>
+              <p class="chart__top-info text-14">Low</p>
+              <p class="chart__top-info alert">400.10</p>
+              <p class="chart__top-info text-14">Shares Outstanding</p>
+              <p class="chart__top-info numbers chart__top-last">7.43B</p>
+              <div class="chart__top-info chart__top-info-item chart__top-info-item--alt">
+                <strong>406.32</strong>
+                <div class="chart__top-info-inner">
+                  <p class="success">+2.24</p>
+                  <p class="success">+0.26%</p>
+                </div>
+              </div>
+              <p class="chart__top-info text-14">High</p>
+              <p class="chart__top-info success">408.36</p>
+              <p class="chart__top-info text-14">Mkt Cap</p>
+              <p class="chart__top-info numbers chart__top-last">3.02T</p>
+              <p class="chart__top-info text-14">52 wk high</p>
+              <p class="chart__top-info numbers">430.82</p>
+              <p class="chart__top-info text-14">Div Yield</p>
+              <p class="chart__top-info numbers chart__top-last">0.74%</p>
+              <div class="chart__top-info chart__top-info-item chart__top-info-item--center">
+                <p class="chart__top-info text-14">After hours:</p>
+                <p class="chart__top-info alert">406.83</p>
+                <p class="chart__top-info alert">-0.27</p>
+                <p class="chart__top-info alert">-0.07%</p>
+                <span>|</span>
+                <p class="chart__top-info numbers">19.59</p>
+                <p class="chart__top-info numbers">04/26 EDT</p>
+              </div>
+              <p class="chart__top-info text-14">52 wk low</p>
+              <p class="chart__top-info numbers">273.13</p>
+              <p class="chart__top-info numbers">View All</p>
+              <img class="chart__top-last" alt="arrow right" src="./img/icons/arrow-right.svg"/>
+              <div class="chart__top-info chart__top-info-item--row">
+                <div class="chart__top-info--summary">
+                  <p class="numbers">Open</p>
+                  <p class="success">408.36</p>
+                </div>
+                <div class="chart__top-info--summary">
+                  <p class="numbers">High</p>
+                  <p class="success">408.36</p>
+                </div>
+                <div class="chart__top-info--summary">
+                  <p class="numbers">Low</p>
+                  <p class="success">408.36</p>
+                </div>
+                <div class="chart__top-info--summary">
+                  <p class="numbers">Close</p>
+                  <p class="success">408.36</p>
+                  <p class="success">+8.906</p>
+                  <p class="success">+2.14%</p>
+                </div>
+                <div class="chart__top-info--summary">
+                  <p class="numbers">Vol</p>
+                  <p class="success">56,254,781</p>
+                </div>
+              </div>
+              <div class="chart__top-info chart__top-info-item chart__top-info-item--row chart__top-info-item--row--padding">
+                <img alt="chart icon" src="./img/chart-icons/icon1.svg"/>
+                <img src="./img/chart-icons/icon2.svg"/>
+                <p class="chart__info chart__info--violet">MA50:406.98</p>
+                <p class="chart__info chart__info--orange">MA200:400.25</p>
+                <img alt="chart icon" src="./img/chart-icons/icon3.svg"/>
+                <img alt="chart icon" src="./img/chart-icons/icon4.svg"/>
+                <img alt="chart icon" src="./img/chart-icons/icon5.svg"/>
+                <img alt="chart icon" src="./img/chart-icons/icon6.svg"/>
+              </div>
+            </div>
+            <div class="chart__table">
+              <div id="candle-chart" class="chart__table-canvas"></div>
+            </div>
+            <div class="chart__top-info chart__top-info-item chart__top-info-item--row">
+              <img alt="chart icon" src="./img/chart-icons/icon1.svg"/>
+              <img src="./img/chart-icons/icon2.svg"/>
+              <p class="chart__info text-14">SI (6,14,24)</p>
+              <p class="chart__info chart__info--blue">RSI 14:62:56</p>
+            </div>
+            <div class="chart__table">
+              <div id="candle-chart-2"></div>
+            </div>           
+            <ul class="chart__table-months">
+               <li class="chart__table-months-item text-14">Jan</li>
+               <li class="chart__table-months-item text-14">Feb</li>
+               <li class="chart__table-months-item text-14">Mar</li>
+               <li class="chart__table-months-item text-14">Apr</li>
+               <li class="chart__table-months-item text-14">May</li>
+               <li class="chart__table-months-item text-14">Jun</li>
+               <li class="chart__table-months-item text-14">Jul</li>
+               <li class="chart__table-months-item text-14">Sep</li>
+               <li class="chart__table-months-item text-14">Oct</li>
+            </ul>
+            <footer class="footer">
+               <div class="footer__wrapper">
+                 <p class="footer__text text-14">Time frame:</p>
+                 <button class="footer__tab">1m</button>
+                 <button class="footer__tab">5m</button>
+                 <button class="footer__tab">15m</button>
+                 <button class="footer__tab">30m</button>
+                 <button class="footer__tab footer__tab--active">1h</button>
+                 <button class="footer__tab">2h</button>
+                 <button class="footer__tab">4h</button>
+                 <button class="footer__tab">D</button>
+                 <button class="footer__tab">W</button>
+                 <button class="footer__tab">M</button>
+                 <button class="footer__tab">All</button>
+                 <button class="footer__tab">
+                   2m
+                   <img alt="arrow down" src="./img/icons/arrow-down.svg"/>
+                  </button>
+               </div>
+            </footer>
+          </section>
         </div>
         <aside class="trade">
           <div class="trade__menu">

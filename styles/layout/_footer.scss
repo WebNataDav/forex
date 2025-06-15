@@ -1,0 +1,48 @@
+@use "../base/variables";
+
+.footer {
+  height: 62px;
+  padding: 12px 25px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 20px;
+    border-top: 1px solid variables.$color-divider;
+    gap: 10px;
+  }
+  &__tab {
+    display: flex;
+    align-items: center;
+    height: 33px;
+    width: 33px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &--active {
+      position: relative;
+      color: variables.$color-hover;
+      border: 1px solid variables.$color-hover;
+    
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: radial-gradient(
+          42.4% 100% at 50% 101.79%,
+          #2DCAFF 34.47%,
+          rgba(5, 5, 5, 0) 100%
+        );
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+    }
+  }
+}
