@@ -1,0 +1,43 @@
+$color-bg: #050505;
+$color-bg-elements: #191919;
+$color-text: #ffffff;
+$color-text-secondary: #999999;
+$color-text-icon: #595959;//Todo
+$color-panel: #1e1e1e;
+$color-accent: #00ffa3;
+$color-danger: #F63C6B;
+$color-trade-active: #0FEDBE;
+$color-hover: #00BDDD;
+$color-violet: #8085FF;
+$color-orange: #FFAA2B;
+$color-divider: #1F1F1F;
+
+@mixin number-style {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+@mixin text-style {
+  font-weight: 400;
+  font-size: 12px;
+  color: #999999;
+}
+
+@mixin text-style-14 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+
+@mixin text-style-red {
+  font-weight: 400;
+  font-size: 14px;
+  color: #F63C6B;
+}
+
+@mixin text-style-success {
+  font-weight: 400;
+  font-size: 14px;
+  color: #0FEDBE;
+}

@@ -1,3 +1,5 @@
+@use "../styles/base/variables";
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -38,4 +40,24 @@ p {
   margin: 0;
   padding: 0;
   font-size: inherit;
+}
+
+.numbers {
+  @include variables.number-style;
+}
+
+.text {
+  @include variables.text-style;
+}
+
+.text-14 {
+  @include variables.text-style-14;
+}
+
+.alert {
+  @include variables.text-style-red;
+}
+
+.success {
+  @include variables.text-style-success;
 }

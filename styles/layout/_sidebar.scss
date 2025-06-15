@@ -1,0 +1,45 @@
+@use "../base/variables";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: variables.$color-bg;
+  width: 64px;
+  padding: 10px;
+  border-right: 1px solid variables.$color-divider;
+
+  &__nav { list-style: none; padding: 0; }
+
+  &__nav-menu {margin-top: 4.8rem;}
+
+  &__nav-menu-item,
+  &__nav-footer-item {
+    margin-bottom: 1rem;
+  }
+
+  &__nav-footer-item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__nav-menu-link,
+  &__nav-footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border 0.2s ease;
+    &:hover {
+      border: 1px solid variables.$color-hover;
+  
+      img {
+        filter: brightness(0) saturate(100%) invert(62%) sepia(96%) saturate(749%) hue-rotate(150deg) brightness(99%) contrast(105%);
+      }
+    }
+  }
+
+  &__nav-footer {margin-top: auto;}
+}
